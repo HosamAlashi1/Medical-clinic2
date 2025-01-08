@@ -13,12 +13,13 @@ class CreateServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('Services', function (Blueprint $table) {
+        Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->decimal('price','8','2');
             $table->text('description')->nullable();
             $table->boolean('status')->default(1);
             $table->timestamps();
+
         });
     }
 
